@@ -3,6 +3,8 @@ body{
     font-size: 12px;
     background-color: rgb(247, 190, 85);
     border-radius: 12px;
+    margin: 0px;
+    margin-bottom: 100px;
 }
 
 h1 { background-color:#414be2;
@@ -44,6 +46,81 @@ p1,p{
 
 hr{
     height: 7px;
-    background-color: rgb(0, 0, 0)
-    
+    background-color: rgb(0, 0, 0) 
 }
+/* navigation bar design */
+.navBar ul {
+    list-style-type: none;
+    background-color: gray;
+    padding: 0px;
+    margin: 0px;
+    overflow:hidden;
+}
+
+.navBar a{
+        color: white;
+        text-decoration: none;
+        padding: 15px;
+        display: block;
+        text-align:left
+}
+
+.navBar a:hover{
+    background-color: blue
+}
+
+.navBar li{
+    float:left;
+}
+
+/*all the drop down design and information to make it functional*/
+.dropbtn {
+    background-color: lightskyblue;
+    color: white;
+    padding: 14px;
+    font-size: 14px;
+    border: none;
+}
+
+.dropdown-design {
+    display: none;
+    position: absolute;
+    background-color: gray;
+    min-width: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(83, 104, 239, 0.716);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-design {
+    display: block;
+}
+
+.dropdown-make a {
+    color:black;
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+}
+
+/*for drop-down to hover*/
+.dropdown-make a:hover {
+    background-color:rgb(11, 171, 224)
+}
+
+/* original Image parameters*/
+.image { 
+    width: 400px;
+    height: 400px;
+    display:block;
+    margin:auto;
+}
+
+/*to be used in main.js as a part of a function that adjusts the image*/
+.tweakedImage {
+    width:800px;
+    height:800px;
+    display:block;
+    margin:auto;
+}
+
+
