@@ -12,3 +12,4 @@ function nameofUser() {
     image.classList.remove("image")
     image.classList.add("tweakedImage") //calls on ImageTweak in CSS
 }
+

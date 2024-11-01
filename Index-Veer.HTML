@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veer Matroja - Proffesional Portfolio</title>
-    <link rel = "stylesheet" href = "style.css">
+    <link rel = "stylesheet" href = "css/style.css">
     
     <style type = "text/css"> 
-    .bodyStyle {color: rgb(1, 41, 71); text-align:center; } 
+    .bodyStyle {color: rgb(1, 41, 71); } 
     .bodyStyle2 {font-family:cursive;}
     a:Hover {background: #00fd26; font-weight: bold; }
     b:active {background: rgb(195, 248, 4)}
@@ -17,7 +17,10 @@
   
     </style>
 
+
+
 <script src="main.js"></script>
+<script src ="storage.js"></script>
 </head>
 <h1>
      Veer Matroja - Proffesional Portfolio
@@ -118,5 +121,66 @@
       
     </tr>
   </table>
+
+<h2> <u><input type="button" onclick="alert('Form is to be filled out by viewers for feedback')" value="Feedback Form"> </u> </h2>
+<form id="myform">
+<fieldset>
+  <label for = "name"> Name </label>
+  <input id = "name" type = "text" name ="name">
+  <br>
+  <label for="Email">Email:</label>
+  <input type="Email" id="Email" name="Email">
+  <br>
+  <p>What is yout satisfaction level for this website?</p>
+  <label for="ok">ok</label>
+  <input type="radio" id="ok" name="lvl" value="ok">
+  <br>
+  <label for="satisfactory">satisfactory</label>
+  <input type="radio" id="satisfactory" name="lvl" value="satisfactory">
+  <br>
+  <label for="good">good</label>
+  <input type="radio" id="good" name="lvl" value="good">
+  <br>
+  <label for="Excellent">Excellent</label>
+  <input type="radio" id="Excellent" name="lvl" value="excellent">
+  <br>
+  <p> Select Applicable Role
+    <select name="Role">
+    <option value="Employee">Employee</option>
+    <option value="Supervisor">Supervisor</option>
+    <option value="Manager">Manager</option>
+    <option value="Director or CEO">Director or CEO</option>
+    </select>
+    <p> Things a personal website should Have (Checkbox)
+      <br>
+      <input type="checkbox"> Photos
+      <br>
+      <input type="checkbox"> Videos
+      <br>
+      <input type="checkbox"> Graphics
+      <br>
+      <input type="checkbox"> Mainly Writing
+      <br>
+      <input type="checkbox"> Little Writing
+      <br>
+      <input type="checkbox"> Experience
+      <br>
+      <input type="checkbox"> School
+      <br>
+      <input type="checkbox"> Awards 
+      <br>
+      <input type="checkbox"> Colorful
+    </p>
+    <br>
+    <u>Provide Some feedback Please</u>
+    <br>
+    <textarea name="message" rows="10" cols="30"> 
+    </textarea>
+    <br>
+    <button onclick="saveData()">Submit</button>
+    </p>
+  </fieldset>
+ </form>
 </body>
+ 
 </html>
