@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veer Matroja - Proffesional Portfolio</title>
-    <link rel = "stylesheet" href = "style.css">
+    <link rel = "stylesheet" href = "css/style.css">
     
     <style type = "text/css"> 
     .bodyStyle {color: rgb(1, 41, 71); } 
@@ -46,7 +46,7 @@
 <div id ="output"></div>
 
 
-<body>
+<body id = effect>
   
 <hr>
 
@@ -122,6 +122,7 @@
     </tr>
   </table>
 
+
 <h2> <u><input type="button" onclick="alert('Form is to be filled out by viewers for feedback')" value="Feedback Form"> </u> </h2>
 <form id="myform">
 <fieldset>
@@ -181,6 +182,57 @@
     </p>
   </fieldset>
  </form>
+
+
+<br> 
+<div class = "ToggleButtons">
+<p>VIDEO - Taken by Me</p>
+</div>
+ <div class = "video-element">
+ <video id = "video1" width="560" height="315" controls >
+    <source src="Vid1.mp4" type="video/mp4">
+</video>
+
+
+<section class = "section1">
+  <button onclick = "playandpause()">Play/Pause</button>
+  <button onclick = "Big()">Big</button>
+  <button onclick = "Small()">Small</button>
+  <button onclick = "Normal()">Normal</button>
+</section>
+</div>
+<br>
+
+<div class="image-grid">
+  
+  <div class="image-element">
+  <img id="IMG1" src="IMG1.jpg" alt="Resort Rooftop in Punta-cana 2022">
+  <p>August 22nd, 2022, Location: Punta-cana</p>
+  <button onclick="showAltText('IMG1')">Photo Desc</button>
+</div>
+
+<div class="image-element">
+  <img id="IMG2" src="IMG2.JPG" alt="Taking pictures of Cars in March 2024">
+  <p>March 25th, 2024, Location: Markham, ON</p>
+  <button onclick="showAltText('IMG2')">Photo Desc</button>
+</div>
+
+<div class="image-element">
+  <img id="IMG3" src="IMG3.JPG" alt=" Resort Kitchen/Buffet during lunch in Punta-cana">
+  <p>August 25th 2022, Location: Punta-Cana</p>
+  <button onclick="showAltText('IMG3')">Photo Desc</button>
+</div>
+
+</div>
+
 </body>
- 
+<br>
+<br>
+
+<div class ="ToggleButtons">
+ <button onclick="IncreaseText()">Enlarge Text</button>
+ <button onclick="decreaseText()">Decrease Text</button>
+ <button onclick="colorChangeText()">change color of text</button>
+ <button onclick="textResetColor()">reset color text</button>
+</div>
 </html>

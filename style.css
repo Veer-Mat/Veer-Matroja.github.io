@@ -54,6 +54,7 @@ hr{
     background-color: gray;
     padding: 0px;
     margin: 0px;
+    font-size: larger;
     overflow:hidden;
 }
 
@@ -122,6 +123,8 @@ hr{
     display:block;
     margin:auto;
 }
+
+
 form#myform {
     width: 50%;
     max-width: 600px;
@@ -177,3 +180,38 @@ form#myform {
     font-weight: bold;
   }
 
+  .video-element{
+    text-align: center; 
+  }
+  
+  .image-grid {
+    display: flex;
+    justify-content: center; /* centers the images horizontally */
+    gap: 10px; /* adds space between the images */
+  }
+  
+  .image-grid img {
+    width: 400px; 
+    height: auto;
+    border-radius: 8px; 
+  }
+  
+  .image-element {
+    text-align: center;
+  }
+  
+  .image-element img {
+    width: 300px; 
+    height: auto;
+    border-radius: 8px; 
+  }
+  
+  .image-element {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+  }
+
+  .ToggleButtons {
+    text-align: center; 
+  }
