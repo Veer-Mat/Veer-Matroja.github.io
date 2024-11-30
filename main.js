@@ -6,17 +6,35 @@ function nameofUser() {
     }
   }
 
-//Function to adjust Image
-  function adjustImage() {
-    let image = document.getElementById("imageTemp");
-    image.classList.remove("image")
-    image.classList.add("tweakedImage") //calls on ImageTweak in CSS
-}
+//Function to adjust Image - This is older code, remove the slashes to make it functional
+  //function adjustImage() {
+   // let image = document.getElementById("imageTemp");
+    //image.classList.remove("image")
+   // image.classList.add("tweakedImage") //calls on ImageTweak in CSS
+//}
+
+//To enlarde profile Image
+document.addEventListener("DOMContentLoaded", function() {
+  const image = document.getElementById("image");
+
+  image.addEventListener("mousedown", function() {
+      image.style.transform = "scale(1.2)";
+  });
+
+  image.addEventListener("mouseup", function() {
+      image.style.transform = "scale(1)";
+  });
+
+  image.addEventListener("mouseleave", function() {
+      image.style.transform = "scale(1)";
+  });
+
+});
+
+//Animate when scrolling down to the content. 
 
 
-
-
-
+//all the Buttons for video
 function playandpause()
 {
   const myVideo = document.getElementById("video1")
@@ -61,6 +79,7 @@ function showAltText(elementId) {
   }
 }
 
+//all functions for increasing and decreasing texts and changing color
 function IncreaseText() {
   const textElements = document.querySelectorAll('#effect');
   textElements.forEach(element => {

@@ -1,23 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
 
-body{
-    font-size: 12px;
-    background-color: rgb(129, 159, 237);
-    border-radius: 12px;
-    margin: 0px;
-    margin-bottom: 100px;
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
 }
 
-h1 { background-color:#414be2;
-    color:#ffffff;text-align:center;
-    font-size: 30px;
-    
+html {
+  scroll-behavior: smooth;
+}
+li, a, button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color:#ffffff; 
+  text-decoration: none;
+  background-color: black; /*Can delete if not want navbar to be black*/
+}
+
+header {
+  background-color: black; /*Can delete if not want navbar to be black*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  padding: 40px 10%;
+  margin-bottom: 1%; /*can delete cuz its added after background color is changed to black*/
+  margin-top: -1%;
 }
 
 
-h2{ 
-    color: rgb(4, 0, 255);
-    font-size: 25px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+.logo {
+  cursor: pointer;
+}
+
+.navBar {
+  list-style: none;
+  background-color: black; /* can delete cuz its added after background color is changed to black*/
+}
+
+.navBar li {
+  display: inline-block;
+  padding: 0px 20px;
+  
+}
+
+.navBar li a:hover {
+  color:#6b73ee;
+  box-shadow: 0px 5px 0px 0px rgba(83, 104, 239, 0.716);
+}
+
+button {
+ padding: 9px 25px;
+ background-color: #414be2;
+ border: none;
+ border-radius: 50px;
+ cursor: pointer;
+ transition: all 0.3s ease 0s;
+}
+
+button:hover {
+  background-color: #0000005e;
+}
+
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 100px auto; 
+
+}
+
+.containerTime {
+  padding: 10px 60px;
+  position: relative;
+  width: 50%;
+  /*animation: movedown 6s linear forwards;
+  opacity: 0;*/
+}
+
+/*@keyframes movedown {
+  0%{
+    opacity: 1;
+    transform: translateY(-140px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}*/
+
+.txtbox {
+  padding: 20px 30px;
+  background: #fff;
+  position: relative;
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.txtbox p4 {
+  margin: 15px 0 5px;
+  font-weight: Bold;
+  color: #000000;
+  background-color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.txtbox small {
+  margin: 15px 0 5px;
+  font-weight: bold;
+  color: #000000;
+  background-color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.left-container-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 2;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid rgb(255, 255, 255);
+  right: -15px;
+}
+
+.right-container-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 2;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid rgb(255, 255, 255);
+  left: -15px;
+}
+
+
+.left-container {
+  left: 0
+}
+
+.right-container {
+  left: 50%;
+}
+
+.containerTime img {
+  position: absolute;
+  width: 40px;
+  border-radius: 50%;
+  right: -20px;
+  top:32px;
+  z-index: 10;
+}
+
+.right-container img {
+  left: -20px;
+}
+
+.awards-list ion-icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  margin-top: 1%;
+  margin-left: 43%;
+  height: 100px;
+  width: 100px;
+  color:rgb(166, 123, 223)
+
+}
+
+.awards-list p {
+text-align: center;
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.timeline::after{
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background: #fafafa;
+  top: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: 1;
+  /*animation: moveline 6s linear forwards;*/
+
+}
+
+/*@keyframes moveline {
+  0%{
+    height: 0;
+  }
+  100%{
+    height: 100%;
+  }
+}*/
+
+@media screen and (max-width: 576px){
+  .timline{
+    margin: 50px auto;
+  }
+  .timeline::after{
+    left: 31px;
+  }
+  .containerTime{
+    width: 100%;
+    padding-left: 80px;
+    padding-right:25px
+  }
+  .txtbox {
+    font-size: 13px;
+  }
+  .txtbox small {
+    margin-bottom: 10px;
+  }
+  .right-container{
+    left:0
+  }
+  .left-container-arrow, .right-container-arrow{
+    border-right: 15px solid #fff;
+    border-left: 0;
+    left: -15px;
+  }
+
+}
+
+h2{
+  background-color: #fff;
+  color: #000000;
 }
 
 h3{ 
@@ -39,155 +255,234 @@ h5{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-p1,p{
-    font-family:cursive;
-    color: rgb(48, 52, 78);
+
+
+p1 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(234, 235, 238);
+    font-size: 40px;
+}
+
+.container { 
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 195px; 
+  margin-top: -50px;
+  margin-bottom: - 100px
+}
+
+.text1 { 
+  flex: 1; 
+  margin-left: 390px;
+}
+
+.name_text {
+  color: #414be2;
 }
 
 hr{
     height: 7px;
     background-color: rgb(0, 0, 0) 
 }
-/* navigation bar design */
-.navBar ul {
-    list-style-type: none;
-    background-color: gray;
-    padding: 0px;
-    margin: 0px;
-    font-size: larger;
-    overflow:hidden;
-}
 
-.navBar a{
-        color: white;
-        text-decoration: none;
-        padding: 15px;
-        display: block;
-        text-align:left
-}
 
-.navBar a:hover{
-    background-color: blue
-}
 
-.navBar li{
-    float:left;
-}
-
-/*all the drop down design and information to make it functional*/
-.dropbtn {
-    background-color: lightskyblue;
-    color: white;
-    padding: 14px;
-    font-size: 14px;
-    border: none;
+.dropdown {
+  position: relative;
 }
 
 .dropdown-design {
-    display: none;
-    position: absolute;
-    background-color: gray;
-    min-width: 140px;
-    box-shadow: 0px 8px 16px 0px rgba(83, 104, 239, 0.716);
-    z-index: 1;
+  display: none;
+  position: absolute;
+  top: 100%; /* Ensure dropdown aligns properly */
+  background-color: gray;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(83, 104, 239, 0.716);
+  z-index: 1;
 }
+
+.dropdown:hover .dropdown-design {
+  display: block;
+}
+
+.dropdown-design a {
+  color: rgb(255, 255, 255);
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+}
+
+
+
 
 .dropdown:hover .dropdown-design {
     display: block;
 }
 
-.dropdown-make a {
-    color:black;
-    padding: 10px 14px;
-    text-decoration: none;
-    display: block;
-}
 
 /*for drop-down to hover*/
 .dropdown-make a:hover {
     background-color:rgb(11, 171, 224)
-}
+} 
 
+
+.image-container { 
+  position: relative; 
+  display: flex; 
+  justify-content: flex-end; 
+  margin-right: 20%; 
+}
 /* original Image parameters*/
 .image { 
     width: 400px;
     height: 400px;
-    display:block;
+    border-radius: 50%;
+    box-shadow: 0px 8px 16px 0px rgba(83, 104, 239, 0.716);
     margin:auto;
+    float: right;
+    margin-right: 10%;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
+.image:hover { 
+  box-shadow: 0px 0px 20px 10px rgb(116, 66, 231);
+}
+
+.image:active { 
+  transform: scale(1.2); 
+}
+
+.specialist { 
+  text-align: center; 
+  padding: 195px; 
+  margin-top: -300px; /* Adjust this value as needed to position the text below the image */ 
+  font-size: 35px; 
+  color: #ffffff; 
+  font-family: 'Orbitron', sans-serif;
+}
+
+
+.text2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p2 {
+  font-size: 24px;
+  color: #ffffff;
+  border-right: 2px solid #414be2; /* Cursor */
+  white-space: nowrap; 
+  overflow: hidden; 
+  width: 31%;
+  animation: typing 9s steps(33) infinite, cursor 1s step-end infinite; 
+}
+
+@keyframes cursor {
+  50% { border-color: transparent; }
+}
+
+@keyframes typing { 
+  0% { width: 0; } 
+  55% { width: 31%; } 
+  100% { width: 31%; } 
+}
+
+.skillstext {
+  text-align: center;
+  display:block;
+  margin-top: 5%;
+  margin-bottom: 7%;
+}
+
+
 /*to be used in main.js as a part of a function that adjusts the image*/
-.tweakedImage {
+/*.tweakedImage {
     width:800px;
     height:800px;
     display:block;
     margin:auto;
-}
+} */
 
 
 form#myform {
-    width: 50%;
-    max-width: 600px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0px 4px 8px rgba(4, 3, 3, 0.2);
-  }
-  
-  fieldset {
-    border: none;
-    padding: 0;
-  }
-  
-  label {
-    font-weight: bold;
-    display: block;
-    margin-top: 10px;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  textarea,
-  select {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-    box-sizing: border-box;
-  }
-  
-  input[type="radio"],
-  input[type="checkbox"] {
-    margin-right: 8px;
-  }
-  
-  p {
-    margin: 15px 0 5px;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  textarea {
-    resize: vertical;
-    margin-top: 5px;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  max-width: 600px;
+  background-color: #6c06e0;
+  border-radius: 8px;
+  margin: auto; /* Centers the form horizontally */
+  min-height: 50vh; /* Ensures the form takes some vertical space */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+fieldset {
+  color: #fff;
+  border: none;
+  padding: 0;
+  margin-top: -10%;
+  width: 100%; /* Ensures fieldset takes full width of the form */
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  color: #ffffff;
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+p {
+  margin: 15px 0 5px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+textarea {
+  resize: vertical;
+  margin-top: 5px;
+}
+
   
   u {
-    color: #333;
+    color: #ffffff;
     font-weight: bold;
   }
 
   .video-element{
     text-align: center; 
   }
+
+  .video-element video{
+    width: 15%; 
+  }
   
   .image-grid {
     display: flex;
     justify-content: center; /* centers the images horizontally */
-    gap: 10px; /* adds space between the images */
+    gap: 1%; /* adds space between the images */
   }
   
   .image-grid img {
@@ -196,22 +491,512 @@ form#myform {
     border-radius: 8px; 
   }
   
-  .image-element {
+
+.image-grid2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 3%;
+    padding: 0 20px;
+    margin-bottom: 10%;
+}
+
+.image-element {
     text-align: center;
-  }
+    margin: 10px;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.image-element p {
+  font-size: 15px;
+}
+
+.image-element button {
+  padding: 9px 25px;
+  background-color: #fafafa;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  font-size: 15px;
+  color: #333;
+ }
+ 
+ .image-element button:hover {
+   background-color: #414be2;
+   color: #ffffff;
+ }
+
+.image-element img { /* can create a new image-element2 and replace it in HTML to reduce border-radius*/
+    width: 100%;
+    max-width: 200px;
+    height: 350px;
+    border-radius: 5%;
   
-  .image-element img {
-    width: 300px; 
-    height: auto;
-    border-radius: 8px; 
+}
+
+
+.image-element img:hover {
+  box-shadow: 0px 0px 20px 10px rgb(116, 66, 231);
+
+}
+
+/*optimizes the bottom vacation pictures*/
+
+@media (max-width: 1200px) {
+    .image-element img {
+        max-width: 50px;
+    }
+}
+
+@media (max-width: 992px) {
+    .image-element img {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-element img {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .image-element img {
+        max-width: 100px;
+    }
+
+    .video-element video {
+      width: 50%;
+      }
+}
+
+
+.image-element2 {
+  text-align: center;
+  margin: 10px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.image-element2 p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+.image-element2 img { /* can create a new image-element2 and replace it in HTML to reduce border-radius*/
+  width: 70%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 30%;
+
+}
+
+
+.image-element2 img:hover {
+box-shadow: 0px 0px 20px 10px rgb(116, 66, 231);
+
+}
+
+
+/* This is for all the image icons - finished */
+
+@media (max-width: 1200px) {
+  .image-element2 img {
+      max-width: 250px;
   }
-  
-  .image-element {
-    margin-top: 5px;
-    font-size: 14px;
-    color: #333;
+}
+
+@media (max-width: 992px) {
+  .image-element2 img {
+      max-width: 200px;
   }
+}
+
+@media (max-width: 768px) {
+  .image-element2 img {
+      max-width: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .image-element2 img {
+      max-width: 100px;
+  }
+}
 
   .ToggleButtons {
     text-align: center; 
   }
+
+  .ToggleButtons button {
+    padding: 9px 25px;
+    background-color: #fafafa;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-size: 15px;
+    color: #333;
+   }
+   
+   .ToggleButtons button:hover {
+     background-color: #414be2;
+     color: #ffffff;
+   }
+
+   .section1 button {
+    padding: 9px 25px;
+    background-color: #fafafa;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-size: 15px;
+    color: #333;
+   }
+   
+   .section1 button:hover {
+     background-color: #414be2;
+     color: #ffffff;
+   }
+
+   
+
+  /* optimized for first page - still needs work */
+  
+  @media (max-width: 1600px) {
+    header {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .navBar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: -10%;
+      margin-top: -1%;
+    }
+
+    .navBar li {
+        padding: 1px;
+        margin: 3%;
+        margin-left: 1%;
+        margin-right: 1%;
+
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+
+    .text1 {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .text1 p1{
+      font-size: 30px;
+    }
+
+    .specialist {
+        padding: 50px 20px;
+        margin-top: 20px;
+        font-size: 25px;
+    }
+
+    .image{
+      width: 300px;
+      height: 300px;
+    }
+    .image-container {
+      margin-right: 0;
+      margin-left: 2%;
+      margin-top: 2%;
+      margin-bottom: -3%;
+  }
+    
+}
+
+@media (max-width: 992px) {
+    .image-container {
+        margin-right: 0;
+    }
+
+    .image {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navBar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navBar li {
+        padding: 10px 0;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .specialist {
+        font-size: 20px;
+        padding: 20px;
+    }
+
+    p1 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 576px) {
+  header {
+    flex-direction: row;
+    align-items: center;
+}
+
+.navBar {
+    flex-direction: row;
+    align-items: center;
+}
+
+.navBar li {
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 20px;
+}
+    .container {
+        flex-direction: column;
+        padding: 70px;
+    }
+
+    .image {
+        max-width: 200px;
+        max-height: 200px;
+        margin-top: 7%;
+        margin-bottom: -30%
+    }
+
+    .specialist {
+      text-align: left; 
+      
+      font-size: 5px; 
+    }
+
+    p2 {
+        font-size: 18px;
+        max-width: 90%;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    button {
+        padding: 6px 20px;
+        font-size: 16px;
+    }
+}
+
+
+/*https://www.youtube.com/watch?v=dhLcyBCJ0r4&list=PL5e68lK9hEzfKlcDrkhKXLmCoikdIsuro */
+.awards-list {
+  width: 50%;
+  margin: 100px auto 0;
+  margin-right: 28.7%;
+  padding: 10px;
+  padding-left: 7%;
+  box-sizing:border-box;
+  margin-top: -5%;
+}
+
+.awards-list li {
+  display: flex;
+  background-color:rgb(169, 98, 236);
+  padding: 5px 5px;
+  color: #fff;
+  margin: 5px 0;
+  transition: .5s;
+}
+
+.awards-list li span {
+  padding: 20px 30px;
+  background-color:rgb(169, 98, 236, .025);
+}
+
+.awards-list li:nth-child(1) {
+  background-color:rgb(169, 98, 236, .6);
+}
+
+.awards-list li:nth-child(2)  {
+  background-color:rgb(169, 98, 236, .5);
+}
+
+.awards-list li:nth-child(3) {
+  background-color:rgb(169, 98, 236, .4);
+}
+
+.awards-list li:nth-child(4) {
+  background-color:rgb(169, 98, 236, .3);
+}
+
+.awards-list li:nth-child(5) {
+  background-color:rgb(169, 98, 236, .2);
+}
+
+.awards-list li:nth-child(6) {
+  background-color:rgb(169, 98, 236, .1);
+}
+
+.awards-list li span:nth-child(1) {
+  width: 30px;
+}
+
+.awards-list li:hover {
+  transform: scale(1.06);
+  background:#000000;
+}
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column; /* Allows stacking of flex items vertically */
+  padding-top: 50px;
+  margin-top: -8%;
+  justify-content: center;
+  align-items: center; /* Centers the content horizontally */
+}
+
+.collapsible {
+  display: flex;
+  flex-direction: row;
+  gap: 20px; /* Add some space between the items */
+  max-width: 1000px; /* Adjust max-width as needed */
+  overflow: hidden;
+  font-weight: 500;
+  margin-bottom: 20px; /* Adds space between rows of collapsibles */
+}
+
+.collapsible-item {
+  flex: 1;
+}
+
+.collapsible input {
+  display: none;
+}
+
+.collapsible label {
+  position: relative;
+  font-weight: 600;
+  background: #fff;
+  box-shadow: 0 5px 11px 0 rgba(0,0,0,0.1), 0 4px 11px 0 rgba(0,0,0,0.88);
+  color: #1c1c6b;
+  display: flex;
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  z-index: 1;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+
+.collapsible-text {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  max-height: 1px;
+  overflow: hidden;
+  border-radius: 4px;
+  line-height: 1.4;
+  position: relative;
+  top: -100%;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.collapsible-text p, h {
+  color: #000000;
+  background-color: #fff;
+}
+
+.collapsible input:checked ~ .collapsible-text {
+  max-height: 300px;
+  padding-bottom: 25px;
+  background: #fff; 
+  box-shadow: 0px 5px 11px 0 rgba(0,0,0,.1), 0 4px 11px 0 rgba(0,0,0,.08);
+  opacity: 1;
+  top: 0;
+}
+
+.collapsible-text h {
+  margin-bottom: 10px;
+  padding: 15px 15px 0;
+  color: #1c1c6b;
+}
+
+.collapsible-text p {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/*SMO and SEO Table*/
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.table-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: 80%;
+  max-width: 1200px;
+  background-color: #000000;
+  box-shadow: 0 4px 0px rgb(36, 35, 35);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: -5%;
+}
+
+.column {
+  flex: 1;
+  padding: 30px;
+}
+
+.column h2 {
+  text-align: center;
+  background-color: #6c06e0;
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 0 0 20px 0;
+}
+
+.row {
+  margin-bottom: 20px;
+}
+
+.row p {
+  background-color: #0000004f;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+
