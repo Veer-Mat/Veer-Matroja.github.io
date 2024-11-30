@@ -18,6 +18,7 @@ li, a, button {
   color:#ffffff; 
   text-decoration: none;
   background-color: black; /*Can delete if not want navbar to be black*/
+  
 }
 
 header {
@@ -25,9 +26,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center; 
-  padding: 40px 10%;
-  margin-bottom: 1%; /*can delete cuz its added after background color is changed to black*/
+  padding: 40px 100px 10px 5%; /*was just 40px and 10% */
+  margin-bottom: -1%; /*can delete cuz its added after background color is changed to black*/
   margin-top: -1%;
+  /*all of this was added underneath for locked navbar*/
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
 }
 
 
@@ -269,7 +275,7 @@ p1 {
   justify-content: space-between; 
   align-items: center; 
   padding: 195px; 
-  margin-top: -50px;
+  margin-top: 70px;
   margin-bottom: - 100px
 }
 
@@ -678,7 +684,7 @@ box-shadow: 0px 0px 20px 10px rgb(116, 66, 231);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-left: -10%;
+      margin-left: -7%;
       margin-top: -1%;
     }
 
@@ -692,11 +698,13 @@ box-shadow: 0px 0px 20px 10px rgb(116, 66, 231);
 
     .logo {
         width: 150px;
+        margin-top: -0.5%;
     }
 
     .container {
         flex-direction: column;
         padding: 50px 20px;
+        margin-top: 6%;
     }
 
     .text1 {
@@ -724,6 +732,10 @@ box-shadow: 0px 0px 20px 10px rgb(116, 66, 231);
       margin-top: 2%;
       margin-bottom: -3%;
   }
+  .image-element2 img {
+    width: 150px;
+    height: 150px;
+}
     
 }
 
@@ -969,7 +981,6 @@ box-shadow: 0px 0px 20px 10px rgb(116, 66, 231);
   width: 80%;
   max-width: 1200px;
   background-color: #000000;
-  box-shadow: 0 4px 0px rgb(36, 35, 35);
   border-radius: 8px;
   overflow: hidden;
   margin-top: -5%;
@@ -999,4 +1010,20 @@ box-shadow: 0px 0px 20px 10px rgb(116, 66, 231);
   border-radius: 4px;
 }
 
+.collapsible-text img {
+ width: 100px;
+ height: 100px;
+ margin-left: 40%;
+ background-color: #fff;
+ margin-bottom: -10%;
+}
 
+.collapsible label:hover {
+  color:#6b73ee;
+  box-shadow: 0px 5px 0px 0px rgba(83, 104, 239, 0.716);
+}
+
+.skillstext p5 {
+  font-size: 10px;
+  color: #fafafa;
+}

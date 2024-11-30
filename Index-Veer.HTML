@@ -16,7 +16,9 @@
 </head>
 
 <header>
+  <a href="#HOME">
       <img class = "logo" src = "VEER MATROJA.png" alt="logo">
+    </a>
   <nav>
  <!-- <div class="nav-left">
     <p>Veer Matroja</p>
@@ -46,14 +48,13 @@
 
 <div id ="output"></div>
 
-
-<body id = effect>
+<div id = "HOME"></div> 
+<body>
   
 
 <!--<h2>Education</h2> 
 <ul><li> Markham District High School, 2018 - 2022</li>
-    <li> Toronto Metropolitan University, 2022 - 2026 </li>  </ul> -->
-       
+    <li> Toronto Metropolitan University, 2022 - 2026 </li>  </ul> -->     
 <div class = "container">  <!--container so that text is aligned with the picture. -->
 <div class = "text1">
 <p1>
@@ -71,7 +72,7 @@
 </div>
 <!--Image declaration-->
 <div class="image-container">
-  <img id="imageTemp" img src = "./Veer.jpeg" alt="VeerImage" onclick="adjustImage(this)" class ="image">
+  <img id="imageTemp" img src = "Veer.jpeg" alt="VeerImage" onclick="adjustImage(this)" class ="image">
 </div>
 </div>
 <div class="specialist"> 
@@ -81,7 +82,6 @@
 </div>
 
 <!--First Segment Done for now-->
-
 
 <div id = "SKILLS"></div>
 <p1 class = "skillstext"> <b>SKILLS </b></p1>
@@ -227,13 +227,16 @@
 
 <!--fourth page done for now-->
 <div id = "PROJECTS"></div>
-<p1 class = "skillstext"> <b>Projects and Extras</b></p1> 
+<p1 class = "skillstext"> <b>Projects and Extras - click to reveal</b></p1> 
 <div class="wrapper">
   <div class="collapsible">
     <div class="collapsible-item">
       <input type="checkbox" id="collapsible-head-1">
       <label for="collapsible-head-1">EASM</label>
       <div class="collapsible-text">
+        <img src = "CyberSecurity.png">
+        <br>
+        <br>
         <h>EASM</h>
         <p>
           Carefully reviewed the external attack surface management for TDSB. Produced Excel sheets and documents to present to senior analysts regarding OWASP top 10, security posture, CWE Top 25, and CISA Exploits.
@@ -244,6 +247,9 @@
       <input type="checkbox" id="collapsible-head-2">
       <label for="collapsible-head-2">Connect4</label>
       <div class="collapsible-text">
+        <img src = "coding.png">
+        <br>
+        <br>
         <h>C4</h>
         <p>
           Developed a virtual game of Connect Four using Java, with over 2000 lines of code, using Java win screen features and Java's graphical user interface.
@@ -256,6 +262,9 @@
       <input type="checkbox" id="collapsible-head-3">
       <label for="collapsible-head-3">Photo Design</label>
       <div class="collapsible-text">
+        <img src = "photoshop2.png">
+        <br>
+        <br>
         <h>Photo Design</h>
         <p>
           Edited Pictures for many clients, which consisted of completely removing the background, using tools such as crop, perspective crop, the spot healing tool brush, healing brush, clone/pattern stamps, free from the pen, liquify, blur, sharpen, erase, marquee tools, and more.
@@ -266,6 +275,9 @@
       <input type="checkbox" id="collapsible-head-4">
       <label for="collapsible-head-4">Radio Commercial</label>
       <div class="collapsible-text">
+        <img src = "radio.png">
+        <br>
+        <br>
         <h>Radio Commercial</h>
         <p>
           Configured and put together a sprite commercial using a studio microphone, and digital audio editing/recording software known as Audacity. Learned conversion of audio files and used features such as Distortion, conversion, amplification, reverb, and echo.
@@ -278,6 +290,9 @@
       <input type="checkbox" id="collapsible-head-5">
       <label for="collapsible-head-5">Microsoft SQL Studio</label>
       <div class="collapsible-text">
+        <img src = "SQL2.png">
+        <br>
+        <br>
         <h>Microsoft SQL Studio</h>
         <p>
           Developed an SQL project that included making various data diagrams, creating relevant relationship links between datasets, populating data carefully, and creating focused queries to improve the project's functionality and analytical capabilities.
@@ -288,6 +303,9 @@
       <input type="checkbox" id="collapsible-head-6">
       <label for="collapsible-head-6">Glo-Bus</label>
       <div class="collapsible-text">
+        <img src = "globus1.png">
+        <br>
+        <br>
         <h>Glo-Bus</h>
         <p>
           Used a technical virtual business simulator, Glo-Bus, to learn and manage a camera industry business regarding AC camera marketing, compensation and facilities, corporate citizenship, and finance and cash flow. 
@@ -322,19 +340,19 @@
   <div class="image-grid">
     
     <div class="image-element">
-    <img id="IMG1" src="IMG1.jpg" alt="IMGS">
+    <img id="IMG1" src="IMG1.jpg" alt="Touring in Toronto back in '22">
     <p>August 22nd 2022, Location: Toronto-ON</p>
     <button onclick="showAltText('IMG1')">Photo Desc</button>
   </div>
   
   <div class="image-element">
-    <img id="IMG2" src="IMG2.jpg" alt="IMGS">
+    <img id="IMG2" src="IMG2.JPG" alt="vacation in dominican-republic back in '22">
     <p>July 25th 2024, Location: Punta-cana</p>
     <button onclick="showAltText('IMG2')">Photo Desc</button>
   </div>
   
   <div class="image-element">
-    <img id="IMG3" src="IMG3.jpg" alt="IMGS">
+    <img id="IMG3" src="IMG3.JPG" alt="playing pool in the resort back in '22">
     <p>July 30th 2022, Location: Punta-Cana</p>
     <button onclick="showAltText('IMG3')">Photo Desc</button>
   </div>
@@ -345,12 +363,7 @@
   <br>
   <br>
   
-  <div class ="ToggleButtons">
-   <button onclick="IncreaseText()">Enlarge Text</button>
-   <button onclick="decreaseText()">Decrease Text</button>
-   <button onclick="colorChangeText()">change color of text</button>
-   <button onclick="textResetColor()">reset color text</button>
-  </div>
+
   </html>
  
   <br>
@@ -358,54 +371,72 @@
 
   <div id = "SEO/SMO"></div>
   <p1 class = "skillstext"> <b>Research Blog - SEO's/SMO's</b></p1> 
-
-  <div class="content">
+  
+<div class="content">
     <div class="table-container">
       <div class="column">
         <h2>SEO</h2>
         <div class="row">
+          <div id = effect>
           <p>Pogo Sticking: 
             <br>
             <br>
             This technique aims to keep users on your webpage for long. The process for this is when a google user clicks on your site, it then pogosticks back to the search result to assist the user in finding something that they are in search for. If users exit from your website and someone pogosticks, google is notified and the website is deranked gradually. Hence it is important to find ways to keep users on the website for a good amount of time. In order for this to happen, it is crucial to captivate the viewers attention from the start. Using bullet points (easy to read), and icons/images are ways for the usr to help returning back to the google homepage.</p>
         </div>
+        </div>
         <div class="row">
+          <div id = effect>
           <p>Meta Tags: 
             <br>
             <br>
             This technique is more towards the technical side of things, but is one of the most effective ways to have a good search engine optimization for your website/social media page. Meta tags are HTML code that is scanned/reckoned by google’s search robots in order to determine the visibility of the web page on the google search engine. With that being said, meta tags add additional information to a website - can be indirect or direct. For example, the meta tags used in HTML can summarize the entire or important information about a website allowing users to read about it directly under the accessible link on google. It is important to also highlight keywords in Meta tags so that when someone searches for that specific keyword on google, your website is one of the top to pop up.</p>
         </div>
+      </div>
         <div class="row">
+          <div id = effect>
           <p>Inbound marketing: 
             <br>
             <br>
             This technique is one that is extremely overlooked by many front end developers and marketers. Usually people use google to ask questions for informative and straight to the point answers. For example, when someone asks for a definition of a term, the definition’s link is at the top of the page. Similarly if your website revolves around a theme or an item that people generally inquire about, it is most clever to add that same expected question in your website, and website meta tags so that it is a direct match. This will allow more website traffic and an increase in website rank.</p>
         </div>
       </div>
+      </div>
       <div class="column">
         <h2>SMO</h2>
         <div class="row">
+          <div id = effect>
           <p>Social Media Integration:
             <br>
             <br>
            With the help of personal social media profiles, those can be embedded into your personal website in many different ways. This allows the algorithm to catch onto your web presence, allowing for a higher and better search result, and higher chances for visitors to visit your website and social media page. Some different ways that we can incorporate social media into the web pages are by simply having social sharing buttons, that way people can share your content to others using a social media platform, have social media links directly to your social media pager and vice versa. As facebook and google plus are sites that are high-authority, having other social media links and your website links can give your website a rating of high-quality, and will also give a well ranking, no matter if the social media page is new.</p>
         </div>
+      </div>
         <div class="row">
+          <div id = effect>
           <p>Share Quality Content:
             <br>
             <br>
              For your website and social media pages to have an overall well SMO it is crucial for one to constantly update content, and web pages so that those who follow along with you, will continue to do so. By sharing and promoting your social platforms, this boosts your website rankings. It is important to produce quality content that people will appeal to. It is also crucial to be versatile, in terms of the content and updates you make to the webpage. This includes having videos, photos, and blogs so that all types of people who enjoy certain things can continue to take interest in your web page.</p>
         </div>
+      </div>
         <div class="row">
+          <div id = effect>
           <p>Use Keywords: 
             <br>
             <br>
             Using keywords is not only beneficial to the overall Search Engine optimization, but it is indeed linked to social media optimization. With that being said, when it comes to uploading content on your website or social media page it is important to use the right keywords in the right place. Using links, and hashtags on social platforms will increase ranking in the search engine and will also increase the visibility and awareness of your work and content across many different social platforms.</p>
         </div>
       </div>
+      </div>
     </div>
   </div>
 
+  <div class ="ToggleButtons">
+    <button onclick="IncreaseText()">Enlarge Text</button>
+    <button onclick="decreaseText()">Decrease Text</button>
+    <button onclick="colorChangeText()">change color of text</button>
+    <button onclick="textResetColor()">reset color text</button>
+   </div>
 
   <br>
   <br>
@@ -474,3 +505,8 @@
 
 </body>
 <br> 
+
+<!--<p1 class = "skillstext2"> <b>Refrences</b></p1> 
+<div class = skillstext>
+  <p5>says:, D., says:, D., says:, J. R., says:, J., & says:, S. (2023, August 14). Top 10 smo techniques & tips to boost your website ranking. Shane Barker. https://shanebarker.com/blog/smo-tips-boost-website-ranking/ </p1>
+  </div> -->
